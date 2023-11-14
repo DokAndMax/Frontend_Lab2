@@ -1,0 +1,13 @@
+table, th, td {
+    border: 1px solid grey;
+}
+
+th, td {
+    height: 5vw;
+}
+
+table {
+    table-layout: fixed;
+    border-spacing: 0;
+    width: 100%;
+}
