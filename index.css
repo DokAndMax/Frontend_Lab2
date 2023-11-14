@@ -11,3 +11,74 @@ table {
     border-spacing: 0;
     width: 100%;
 }
+
+.circle {
+    border-radius: 50%;
+}
+
+.big {
+    height: 125px;
+    width: 125px;
+    background-color: darkgrey;
+    position: relative;
+    margin: 50px;
+
+}
+
+.medium {
+    --medium-circle-radius: 40%;
+    height: var(--medium-circle-radius);
+    width: var(--medium-circle-radius);
+    background-color: white;
+    position: absolute;
+    top: calc(50% - (var(--medium-circle-radius)/2));
+    left: calc(50% - (var(--medium-circle-radius)/2));
+}
+
+.small {
+    --small-circle-radius: 25%;
+    height: var(--small-circle-radius);
+    width: var(--small-circle-radius);
+    background-color: white;
+    position: absolute;
+}
+
+.sm-1 {
+    top: calc(0% - (var(--small-circle-radius)/2));
+    left: calc(50% - (var(--small-circle-radius)/2));
+}
+
+.sm-2 {
+    top: calc(0%);
+    left: calc(0%);
+}
+
+.sm-3 {
+    top: calc(50% - (var(--small-circle-radius)/2));
+    left: calc(0% - (var(--small-circle-radius)/2));
+}
+
+.sm-4 {
+    top: calc(0%);
+    right: calc(0%);
+}
+
+.sm-5 {
+    top: calc(50% - (var(--small-circle-radius)/2));
+    right: calc(0% - (var(--small-circle-radius)/2));
+}
+
+.sm-6 {
+    bottom: calc(0%);
+    right: calc(0%);
+}
+
+.sm-7 {
+    bottom: calc(0% - (var(--small-circle-radius)/2));
+    left: calc(50% - (var(--small-circle-radius)/2));
+}
+
+.sm-8 {
+    bottom: calc(0%);
+    left: calc(0%);
+}
