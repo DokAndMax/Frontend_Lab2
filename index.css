@@ -22,11 +22,10 @@ table {
     background-color: darkgrey;
     position: relative;
     margin: 50px;
-
 }
 
 .medium {
-    --medium-circle-radius: 40%;
+    --medium-circle-radius: 37%;
     height: var(--medium-circle-radius);
     width: var(--medium-circle-radius);
     background-color: white;
@@ -43,42 +42,42 @@ table {
     position: absolute;
 }
 
-.sm-1 {
+.big :nth-child(1 of .small) {
     top: calc(0% - (var(--small-circle-radius)/2));
     left: calc(50% - (var(--small-circle-radius)/2));
 }
 
-.sm-2 {
+.big :nth-child(2 of .small) {
     top: calc(0%);
     left: calc(0%);
 }
 
-.sm-3 {
+.big :nth-child(3 of .small) {
     top: calc(50% - (var(--small-circle-radius)/2));
     left: calc(0% - (var(--small-circle-radius)/2));
 }
 
-.sm-4 {
+.big :nth-child(4 of .small) {
     top: calc(0%);
     right: calc(0%);
 }
 
-.sm-5 {
+.big :nth-child(5 of .small) {
     top: calc(50% - (var(--small-circle-radius)/2));
     right: calc(0% - (var(--small-circle-radius)/2));
 }
 
-.sm-6 {
+.big :nth-child(6 of .small) {
     bottom: calc(0%);
     right: calc(0%);
 }
 
-.sm-7 {
+.big :nth-child(7 of .small) {
     bottom: calc(0% - (var(--small-circle-radius)/2));
     left: calc(50% - (var(--small-circle-radius)/2));
 }
 
-.sm-8 {
+.big :nth-child(8 of .small) {
     bottom: calc(0%);
     left: calc(0%);
 }
