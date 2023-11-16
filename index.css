@@ -14,14 +14,17 @@ table {
 
 .circle {
     border-radius: 50%;
+    inset: 0;
+    margin: auto;
 }
 
-.big {
+.big, .gear {
     height: 125px;
     width: 125px;
     background-color: darkgrey;
     position: relative;
     margin: 50px;
+    container-type: size;
 }
 
 .medium {
@@ -30,11 +33,9 @@ table {
     width: var(--medium-circle-radius);
     background-color: white;
     position: absolute;
-    top: calc(50% - (var(--medium-circle-radius)/2));
-    left: calc(50% - (var(--medium-circle-radius)/2));
 }
 
-.small {
+.small, .tooth {
     --small-circle-radius: 25%;
     height: var(--small-circle-radius);
     width: var(--small-circle-radius);
@@ -43,41 +44,69 @@ table {
 }
 
 .big :nth-child(1 of .small) {
-    top: calc(0% - (var(--small-circle-radius)/2));
-    left: calc(50% - (var(--small-circle-radius)/2));
+    top: -100%;
 }
 
 .big :nth-child(2 of .small) {
-    top: calc(0%);
-    left: calc(0%);
+    top: -75%;
+    right: -75%;
 }
 
 .big :nth-child(3 of .small) {
-    top: calc(50% - (var(--small-circle-radius)/2));
-    left: calc(0% - (var(--small-circle-radius)/2));
+    right: -100%;
 }
 
 .big :nth-child(4 of .small) {
-    top: calc(0%);
-    right: calc(0%);
+    bottom: -75%;
+    right: -75%;
 }
 
 .big :nth-child(5 of .small) {
-    top: calc(50% - (var(--small-circle-radius)/2));
-    right: calc(0% - (var(--small-circle-radius)/2));
+    bottom: -100%;
 }
 
 .big :nth-child(6 of .small) {
-    bottom: calc(0%);
-    right: calc(0%);
+    bottom: -75%;
+    left: -75%;
 }
 
 .big :nth-child(7 of .small) {
-    bottom: calc(0% - (var(--small-circle-radius)/2));
-    left: calc(50% - (var(--small-circle-radius)/2));
+    left: -100%;
 }
 
 .big :nth-child(8 of .small) {
-    bottom: calc(0%);
-    left: calc(0%);
+    top: -75%;
+    left: -75%;
+}
+
+.gear :nth-child(1 of .tooth) {
+    transform: rotate(0deg) translateY(-50cqh);
+}
+
+.gear :nth-child(2 of .tooth) {
+    transform: rotate(45deg) translateY(-50cqh);
+}
+
+.gear :nth-child(3 of .tooth) {
+    transform: rotate(90deg) translateY(-50cqh);
+}
+
+.gear :nth-child(4 of .tooth) {
+    transform: rotate(135deg) translateY(-50cqh);
+}
+
+.gear :nth-child(5 of .tooth) {
+    transform: rotate(180deg) translateY(-50cqh);
+}
+
+.gear :nth-child(6 of .tooth) {
+    transform: rotate(225deg) translateY(-50cqh);
+}
+
+.gear :nth-child(7 of .tooth) {
+    transform: rotate(270deg) translateY(-50cqh);
+}
+
+.gear :nth-child(8 of .tooth) {
+    transform: rotate(315deg) translateY(-50cqh);
 }
